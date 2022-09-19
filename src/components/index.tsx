@@ -1,3 +1,4 @@
 import "./tailwind.css"
 
-export * from "./JButton/JButton"
+export * from "./Button/Button"
+export * from "./Accordion/Accordion"

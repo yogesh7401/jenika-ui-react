@@ -1,12 +1,12 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { JButton } from '../src/components/JButton/JButton';
+import { Button } from '../src/components/Button/Button';
 import "../src/components/tailwind.css"
-import { JButtonProps } from "../src/components/types"
+import { ButtonProps } from "../src/components/types"
 
 const meta: Meta = {
-  title: 'Components/Button/JButton',
-  component: JButton,
+  title: 'Components/Button/Button',
+  component: Button,
   parameters: {
     controls: { expanded: true },
   },
@@ -14,7 +14,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<JButtonProps> = args => <JButton {...args} />;
+const Template: Story<ButtonProps> = args => <Button {...args} />;
 
 export const Default = Template.bind({});
 export const Primary = Template.bind({});

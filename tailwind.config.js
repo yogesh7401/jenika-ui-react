@@ -12,7 +12,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      border: ['last'],
+    }
   },
   plugins: [],
   prefix: 'jui-'

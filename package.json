@@ -1,5 +1,5 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -7,13 +7,15 @@
     "dist"
   ],
   "engines": {
-    "node": ">=10"
+    "node": "^14.0.0 || ^16.0.0 || >=18.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:yogesh7401/jenika-ui-react.git"
   },
   "scripts": {
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "start": "tsdx watch",
     "build": "NODE_ENV=production tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -41,6 +43,7 @@
   "name": "jenika-ui-react",
   "author": "yogesh7401",
   "module": "dist/jenika-ui-react.esm.js",
+  "homepage": "http://yogesh7401.github.io/jenika-ui-react",
   "size-limit": [
     {
       "path": "dist/jenika-ui-react.cjs.production.min.js",
@@ -70,6 +73,7 @@
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^9",
     "babel-loader": "^8.2.5",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "postcss": "^8.4.16",

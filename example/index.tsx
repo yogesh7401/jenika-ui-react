@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { JButton } from '../.';
+import { Button } from '../.';
 
 const App = () => {
   return (
     <div>
-      <JButton text='My Button' />
+      <Button text='My Button' />
     </div>
   );
 };

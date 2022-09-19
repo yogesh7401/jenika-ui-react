@@ -1,10 +1,10 @@
 export const sizes = {
-    xs: 'jui-px-2 jui-py-1 jui-text-xs',
-    sm: 'jui-px-4 jui-py-2 jui-text-sm',
-    md: 'jui-px-6 jui-py-3 jui-text-md',
-    lg: 'jui-px-8 jui-py-4 jui-text-lg',
-    xl: 'jui-px-10 jui-py-5 jui-text-xl',
-    xxl: 'jui-px-10 jui-py-5 jui-text-2xl'
+    xs: 'jui-px-2 jui-py-1 jui-text-sm',
+    sm: 'jui-px-2 jui-py-1 jui-text-md',
+    md: 'jui-px-4 jui-py-2 jui-text-md',
+    lg: 'jui-px-5 jui-py-3 jui-text-lg',
+    xl: 'jui-px-6 jui-py-4 jui-text-xl',
+    xxl: 'jui-px-8 jui-py-5 jui-text-2xl'
 };
   
 export const variants = {
