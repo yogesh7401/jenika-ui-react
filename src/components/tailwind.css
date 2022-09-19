@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.jripple {
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 600ms linear;
-    background-color: rgba(255, 255, 255, 0.7);
+.jui-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 @keyframes ripple {
-    to {
-      transform: scale(4);
-      opacity: 0;
-    }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 .jui-accordion-desc-fade {
@@ -24,9 +24,9 @@
 }
 @keyframes JuifadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }

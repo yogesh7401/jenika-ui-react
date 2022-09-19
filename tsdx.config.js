@@ -1,6 +1,6 @@
 const postcss = require('rollup-plugin-postcss');
 const tailwindcss = require('tailwindcss');
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   rollup(config, options) {
@@ -13,8 +13,8 @@ module.exports = {
             theme: {
               extend: {
                 colors: {
-                  teal:colors.teal,
-                  orange:colors.orange,
+                  teal: colors.teal,
+                  orange: colors.orange,
                 },
               },
             },
@@ -22,8 +22,8 @@ module.exports = {
               extend: {},
             },
             plugins: [],
-            prefix: 'jui-'
-          })
+            prefix: 'jui-',
+          }),
         ],
         config: {
           path: './postcss.config.js',

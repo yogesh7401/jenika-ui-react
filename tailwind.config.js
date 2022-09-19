@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './stories/*'],
@@ -6,16 +6,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        teal:colors.teal,
-        orange:colors.orange,
+        teal: colors.teal,
+        orange: colors.orange,
       },
     },
   },
   variants: {
     extend: {
       border: ['last'],
-    }
+    },
   },
   plugins: [],
-  prefix: 'jui-'
-}
+  prefix: 'jui-',
+};

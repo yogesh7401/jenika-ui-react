@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button } from '../src/components/Button/Button';
-import "../src/components/tailwind.css"
-import { ButtonProps } from "../src/components/types"
+import '../src/components/tailwind.css';
+import { ButtonProps } from '../src/components/types';
 
 const meta: Meta = {
-  title: 'Components/Button/Button',
+  title: 'Components/Button',
   component: Button,
   parameters: {
     controls: { expanded: true },
@@ -14,7 +14,11 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = (args, args1) => (
+  <>
+    <Button {...args} />
+  </>
+);
 
 export const Default = Template.bind({});
 export const Primary = Template.bind({});
@@ -25,47 +29,53 @@ export const Info = Template.bind({});
 export const Danger = Template.bind({});
 export const Dark = Template.bind({});
 export const Light = Template.bind({});
+export const Disabled = Template.bind({});
 
 Default.args = {
-  text : "Default"
+  text: 'Default',
 };
 
 Primary.args = {
-  text : "Primary",
-  variant: "primary"
+  text: 'Primary',
+  variant: 'primary',
 };
 
 Secondary.args = {
-  text : "Secondary",
-  variant: "secondary"
+  text: 'Secondary',
+  variant: 'secondary',
 };
 
 Success.args = {
-  text : "Success",
-  variant: "success"
+  text: 'Success',
+  variant: 'success',
 };
 
 Warning.args = {
-  text : "Warning",
-  variant: "warning"
+  text: 'Warning',
+  variant: 'warning',
 };
 
 Info.args = {
-  text : "Info",
-  variant: "info"
+  text: 'Info',
+  variant: 'info',
 };
 
 Danger.args = {
-  text : "Danger",
-  variant: "danger"
+  text: 'Danger',
+  variant: 'danger',
 };
 
 Dark.args = {
-  text : "Dark",
-  variant: "dark"
+  text: 'Dark',
+  variant: 'dark',
 };
 
 Light.args = {
-  text : "Light",
-  variant: "light"
+  text: 'Light',
+  variant: 'light',
+};
+
+Disabled.args = {
+  variant: 'warning',
+  disable: true,
 };

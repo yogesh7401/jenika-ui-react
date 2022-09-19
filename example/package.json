@@ -8,6 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "jenika-ui-react": "^0.0.5",
     "parcel": "1.12.3",
     "react-app-polyfill": "^1.0.0"
   },
