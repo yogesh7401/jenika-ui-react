@@ -36,8 +36,10 @@ export default funtion App() {
 
 ## Components
 
-- [Accordion](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-accordion-accordion--default)
-- [Button](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-button-button--default)
+- [Accordion](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-accordion--default)
+- [Alert](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-alert--default)
+- [Alert Dialog](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-alert-dialog--default)
+- [Button](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-button--default)
 
 ## Contribute
 
