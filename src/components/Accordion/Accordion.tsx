@@ -20,11 +20,13 @@ export const Accordion: FC<AccordionProps> = (props) => {
     } ${!showIcon ? 'jui-hidden' : ''} ${
       iconPosition === 'right' ? 'jui-order-last' : 'jui-mr-2'
     }`;
-  const titleClass =
-    'jui-accordion-title jui-bg-gray-50 jui-flex jui-p-4 jui-border-b last:jui-border-0';
-  const descClass = `jui-accordion-desc jui-p-4 ${
+  const titleClass = (i: number) =>
+    `jui-accordion-title jui-bg-gray-50 jui-flex jui-p-4 ${
+      data?.length === i + 1 ? '' : 'jui-border-b'
+    } last:jui-border-0  ${titleClassName}`;
+  const descClass = `jui-accordion-desc jui-p-4 jui-bg-white ${
     fadeAnimation ? 'jui-accordion-desc-fade' : ''
-  }`;
+  }  ${descClassName}`;
 
   function handleOpen(key: number) {
     if (isOpen.includes(key)) {
@@ -47,8 +49,8 @@ export const Accordion: FC<AccordionProps> = (props) => {
         return (
           <div key={i} id={`jui-panel panel+${i + 1}`}>
             <div
-              id={`jui-panel-title jui-panel-title-${i + 1} ${titleClassName}`}
-              className={titleClass}
+              id={`jui-panel-title jui-panel-title-${i + 1}`}
+              className={titleClass(i)}
               onClick={() => handleOpen(i)}
             >
               {icon === undefined ? (
@@ -63,7 +65,7 @@ export const Accordion: FC<AccordionProps> = (props) => {
             </div>
             {isOpen.includes(i) ? (
               <div
-                id={`jui-panel-desc jui-panel-desc-${i + 1} ${descClassName}`}
+                id={`jui-panel-desc jui-panel-desc-${i + 1}`}
                 className={descClass}
               >
                 <p>{e.desc}</p>

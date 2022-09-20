@@ -1,12 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Accordion, Alert, Button } from '../.';
+import { Accordion, Alert, Button, AlertDialog } from '../.';
+import './index.css';
 
 const App = () => {
   return (
     <div>
-      <Button variant="danger" text="button" />
+      <Button variant="danger" text="button" className="accordion-desc" />
       <Accordion
+        titleClassName="accordion-title"
+        descClassName="accordion-desc"
         data={[
           {
             title: 'Section 1',
@@ -22,7 +25,14 @@ const App = () => {
           },
         ]}
       />
-      <Alert type="warning" />
+      <Alert type="warning" onClose={() => null} />
+      <AlertDialog
+        title={'example'}
+        message={'example alert message'}
+        onConfirm={() => null}
+        onCancel={() => null}
+        onClose={() => null}
+      />
     </div>
   );
 };

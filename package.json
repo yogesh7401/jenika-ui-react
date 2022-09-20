@@ -14,7 +14,7 @@
     "url": "git@github.com:yogesh7401/jenika-ui-react.git"
   },
   "scripts": {
-    "predeploy": "npm run build-storybook",
+    "predeploy": "yarn build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "start": "tsdx watch",
     "build": "NODE_ENV=production tsdx build",

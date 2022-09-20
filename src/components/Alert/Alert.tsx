@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { border } from '../helper/globle';
 import {
   CloseIcon,
   DangerIcon,
@@ -18,6 +19,8 @@ export const Alert: FC<AlertProps> = (props) => {
     closable,
     visible,
     className,
+    onClose = () => null,
+    borderPosition = 'top',
   } = props;
   var Icon;
   switch (type) {
@@ -42,12 +45,18 @@ export const Alert: FC<AlertProps> = (props) => {
     success: 'jui-bg-green-500',
     info: 'jui-bg-blue-400',
   };
+  const borderColor = {
+    danger: 'jui-border-red-700',
+    warning: 'jui-border-orange-700',
+    success: 'jui-border-green-700',
+    info: 'jui-border-blue-600',
+  };
   return (
     <>
       {visible && (
         <div
           id="jui-alert"
-          className={`jui-p-4 jui-text-white jui-flex ${variant[type]} ${className}`}
+          className={`jui-p-4 jui-text-white jui-flex ${borderColor[type]} ${border[borderPosition]} ${variant[type]} ${className}`}
         >
           {showIcon && (
             <div className="jui-h-6 jui-w-6 jui-mr-3 my-auto">
@@ -63,7 +72,10 @@ export const Alert: FC<AlertProps> = (props) => {
             <p>{message} </p>
           </div>
           {closable && (
-            <div className="jui-h-5 jui-cursor-pointer jui-w-5 my-auto">
+            <div
+              className="jui-h-5 jui-cursor-pointer jui-w-5 my-auto"
+              onClick={() => onClose()}
+            >
               <CloseIcon />
             </div>
           )}

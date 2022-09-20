@@ -37,3 +37,12 @@ export const outlined = {
   default:
     'jui-border jui-border-gray-400 hover:jui-border-gray-500 jui-text-gray-400 hover:jui-text-gray-500',
 };
+
+export const border = {
+  top: 'jui-border-t-4',
+  bottom: 'jui-border-b-4',
+  left: 'jui-border-l-4',
+  right: 'jui-border-r-4',
+  full: 'jui-border-4',
+  none: 'jui-border-0',
+};

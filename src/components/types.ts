@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 export type ButtonProps = {
-  text?: string;
+  text?: ReactNode;
   className?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
   type?: 'filled' | 'outlined';
@@ -38,5 +38,27 @@ export interface AlertProps {
   icon?: ReactNode;
   showIcon?: boolean;
   closable?: boolean;
+  onClose: CallableFunction;
   visible?: boolean;
+  borderPosition?: 'top' | 'bottom' | 'left' | 'right' | 'none' | 'full';
+}
+
+export interface AlertDialogProps {
+  className?: string;
+  type?: 'success' | 'danger' | 'warning' | 'info';
+  message?: ReactNode;
+  title?: ReactNode;
+  icon?: ReactNode;
+  showIcon?: boolean;
+  closable?: boolean;
+  visible?: boolean;
+  confirmBtnText?: ReactNode;
+  cancleBtnText?: ReactNode;
+  showConfirmBtn?: boolean;
+  showCancelBtn?: boolean;
+  onConfirm?: CallableFunction;
+  onCancel?: CallableFunction;
+  onClose?: CallableFunction;
+  borderPosition?: 'top' | 'bottom' | 'left' | 'right' | 'none' | 'full';
+  width?: string | number;
 }

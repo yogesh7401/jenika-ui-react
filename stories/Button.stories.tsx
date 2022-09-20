@@ -30,6 +30,7 @@ export const Danger = Template.bind({});
 export const Dark = Template.bind({});
 export const Light = Template.bind({});
 export const Disabled = Template.bind({});
+export const Outlined = Template.bind({});
 
 Default.args = {
   text: 'Default',
@@ -78,4 +79,10 @@ Light.args = {
 Disabled.args = {
   variant: 'warning',
   disable: true,
+};
+
+Outlined.args = {
+  text: 'Outlined',
+  variant: 'primary',
+  type: 'outlined',
 };

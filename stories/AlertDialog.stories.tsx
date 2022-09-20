@@ -1,13 +1,14 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Alert } from '../src/components/Alert/Alert';
+import { AlertDialog } from '../src/components/AlertDialog/AlertDialog';
 import '../src/components/tailwind.css';
-import { AlertProps } from '../src/components/types';
+import { AlertDialogProps } from '../src/components/types';
 import { ArrowIcon } from '../src/components/helper/Icons';
+import { Button } from '../src/components/Button/Button';
 
 const meta: Meta = {
-  title: 'Components/Alert',
-  component: Alert,
+  title: 'Components/Alert Dialog',
+  component: AlertDialog,
   parameters: {
     controls: { expanded: true },
   },
@@ -15,19 +16,28 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<AlertProps> = (args) => <Alert {...args} />;
+const Template: Story<AlertDialogProps> = (args) => (
+  <AlertDialog className="min-h-screen" {...args} />
+);
 
 export const Default = Template.bind({});
 export const CustomIcon = Template.bind({});
+export const CustomWidth = Template.bind({});
 export const WithoutIcon = Template.bind({});
-export const WithHTMLTag = Template.bind({});
 export const NotClosable = Template.bind({});
 export const WithoutTitle = Template.bind({});
+export const CustomMessage = Template.bind({});
 export const FullBordered = Template.bind({});
 
 Default.args = {
-  title: 'Info',
-  message: 'Information alert is displayed',
+  title: 'Success',
+  message: 'Successfully displayed alert message',
+};
+CustomWidth.args = {
+  title: 'Success',
+  message: 'Successfully displayed alert message with 900px width',
+  type: 'success',
+  width: '900px',
 };
 CustomIcon.args = {
   title: 'Custom alert',
@@ -49,19 +59,32 @@ NotClosable.args = {
 WithoutTitle.args = {
   message: 'Alert Message without title',
 };
-WithHTMLTag.args = {
+CustomMessage.args = {
   title: 'With HTML Tag',
+  showConfirmBtn: false,
+  showCancelBtn: false,
   message: (
-    <p>
-      Alert message with{' '}
-      <a
-        className="jui-text-blue-400"
-        href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-      >
-        HTML
-      </a>{' '}
-      tag
-    </p>
+    <div>
+      <p>
+        Alert message with{' '}
+        <a
+          className="jui-text-blue-400"
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+        >
+          HTML
+        </a>{' '}
+        tag
+      </p>
+      <div className="jui-flex jui-mt-5 jui-px-3 jui-w-full jui-justify-between">
+        <Button
+          text={'Accept'}
+          className="jui-mx-auto"
+          variant={'warning'}
+          type={'outlined'}
+          onClick={() => null}
+        />
+      </div>
+    </div>
   ),
   type: 'warning',
 };
