@@ -16,6 +16,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "NODE_ENV=production tsdx build",
+    "build:win32": "SET NODE_ENV=production tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint --fix",
     "size": "size-limit",
