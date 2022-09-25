@@ -23,7 +23,11 @@ export const Badge: FC<BadgeProps> = (props) => {
   console.log(text, size, onClick, type, className, badgeClass, variant);
 
   return (
-    <p id='jui-badge' className={`${badgeClass} ${className}`} onClick={() => onClick()}>
+    <p
+      id="jui-badge"
+      className={`${badgeClass} ${className}`}
+      onClick={() => onClick()}
+    >
       {showIcon ? (
         icon ? (
           <span className={badgeIconSize[size] + ' jui-mr-1'}> {icon} </span>

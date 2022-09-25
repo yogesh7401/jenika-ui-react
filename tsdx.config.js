@@ -36,7 +36,7 @@ module.exports = {
         },
       })
     );
-    config.plugins = config.plugins.map(p =>
+    config.plugins = config.plugins.map((p) =>
       p.name === 'replace'
         ? replace({
             'process.env.NODE_ENV': JSON.stringify(options.env),
