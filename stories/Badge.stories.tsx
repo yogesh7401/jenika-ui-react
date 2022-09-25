@@ -15,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<BadgeProps> = (args, args1) => (
+const Template: Story<BadgeProps> = (args) => (
   <>
     <Badge {...args} />
   </>
