@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button } from '../src/components/Button/Button';
+import { Badge } from '../src/components/Badge/Badge';
 import '../src/components/tailwind.css';
-import { ButtonProps } from '../src/components/types';
+import { BadgeProps } from '../src/components/types';
 import { SuccessIcon } from '../src/components/helper/Icons';
 
 const meta: Meta = {
-  title: 'Components/Button',
-  component: Button,
+  title: 'Components/Badge',
+  component: Badge,
   parameters: {
     controls: { expanded: true },
   },
@@ -15,42 +15,36 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = (args, args1) => (
+const Template: Story<BadgeProps> = (args, args1) => (
   <>
-    <Button {...args} />
+    <Badge {...args} />
   </>
 );
 
 export const Default = Template.bind({});
-export const Primary = Template.bind({});
+export const Danger = Template.bind({});
 export const WithIcon = Template.bind({});
 export const CustomIcon = Template.bind({});
-export const Disabled = Template.bind({});
 export const Outlined = Template.bind({});
 
 Default.args = {};
 
-Primary.args = {
-  text: 'Primary',
-  variant: 'primary',
+Danger.args = {
+  text: 'Danger',
+  variant: 'danger',
+  size: 'sm',
 };
 
 WithIcon.args = {
-  text: 'Secondary',
-  variant: 'secondary',
+  text: 'With Icon',
+  variant: 'info',
   showIcon: true,
 };
 
 CustomIcon.args = {
-  text: 'Success',
-  variant: 'success',
+  text: 'Success Icon',
   showIcon: true,
   icon: <SuccessIcon />,
-};
-
-Disabled.args = {
-  variant: 'warning',
-  disable: true,
 };
 
 Outlined.args = {

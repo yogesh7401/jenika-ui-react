@@ -1,10 +1,31 @@
 export const sizes = {
-  xs: 'jui-px-2 jui-py-1 jui-text-sm',
+  xs: 'jui-px-2 jui-py-1 jui-text-xs',
   sm: 'jui-px-2 jui-py-1 jui-text-md',
   md: 'jui-px-4 jui-py-2 jui-text-md',
   lg: 'jui-px-5 jui-py-3 jui-text-lg',
   xl: 'jui-px-6 jui-py-4 jui-text-xl',
   xxl: 'jui-px-8 jui-py-5 jui-text-2xl',
+};
+
+export const buttonIconSize = {
+  xs: 'jui-w-5 jui-h-5 jui-my-auto',
+  sm: 'jui-w-5 jui-h-5 jui-my-auto',
+  md: 'jui-w-6 jui-h-6',
+  lg: 'jui-w-6 jui-h-6',
+  xl: 'jui-w-6 jui-h-6',
+  xxl: 'jui-w-6 jui-h-6',
+};
+
+export const badgeSize = {
+  sm: 'jui-px-2 jui-py-1 jui-text-xxxs',
+  md: 'jui-px-2 jui-py-1 jui-text-xxs',
+  lg: 'jui-px-2 jui-py-1 jui-text-xs',
+};
+
+export const badgeIconSize = {
+  sm: 'jui-w-3 jui-h-3',
+  md: 'jui-w-4 jui-h-4',
+  lg: 'jui-w-6 jui-h-6',
 };
 
 export const variants = {

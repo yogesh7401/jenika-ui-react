@@ -17,6 +17,8 @@ export type ButtonProps = {
     | 'default';
   disable?: boolean;
   onClick?: CallableFunction;
+  icon?: ReactNode;
+  showIcon?: boolean;
 };
 
 export interface AccordionProps {
@@ -61,4 +63,24 @@ export interface AlertDialogProps {
   onClose?: CallableFunction;
   borderPosition?: 'top' | 'bottom' | 'left' | 'right' | 'none' | 'full';
   width?: string | number;
+}
+
+export interface BadgeProps {
+  className?: string;
+  text?: string | number;
+  size?: 'sm' | 'md' | 'lg';
+  type?: 'filled' | 'outlined';
+  onClick?: CallableFunction;
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'danger'
+    | 'warning'
+    | 'info'
+    | 'dark'
+    | 'light'
+    | 'default';
+  icon?: ReactNode;
+  showIcon?: boolean;
 }

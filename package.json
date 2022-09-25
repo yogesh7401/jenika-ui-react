@@ -14,8 +14,6 @@
     "url": "git@github.com:yogesh7401/jenika-ui-react.git"
   },
   "scripts": {
-    "predeploy": "yarn build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static",
     "start": "tsdx watch",
     "build": "NODE_ENV=production tsdx build",
     "test": "tsdx test --passWithNoTests",
@@ -24,7 +22,9 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
+    "predeploy": "build-storybook",
     "build-storybook": "build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "pretty": "prettier --write ."
   },
   "peerDependencies": {

@@ -6,3 +6,4 @@ yarn.lock
 example/.cache
 example/dist
 example/node_modules
+storybook-static

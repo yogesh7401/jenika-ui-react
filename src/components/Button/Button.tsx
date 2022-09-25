@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { ButtonProps } from '../types';
-import { outlined, sizes, variants } from '../helper/globle';
+import { buttonIconSize, outlined, sizes, variants } from '../helper/globle';
+import { ArrowIcon } from '../helper/Icons';
 
 export const Button: FC<ButtonProps> = (props) => {
   const {
@@ -11,8 +12,10 @@ export const Button: FC<ButtonProps> = (props) => {
     onClick = () => null,
     type = 'filled',
     className,
+    showIcon,
+    icon,
   } = props;
-  const buttonClass = `jui-rounded ${
+  const buttonClass = `jui-rounded jui-flex ${
     type === 'filled' ? variants[variant] : outlined[variant]
   } ${sizes[size]} ${disable ? 'jui-cursor-not-allowed' : ''} ${className}`;
 
@@ -23,6 +26,15 @@ export const Button: FC<ButtonProps> = (props) => {
       className={buttonClass}
       onClick={() => onClick()}
     >
+      {showIcon ? (
+        icon ? (
+          <span className={buttonIconSize[size] + ' jui-mr-1'}> {icon} </span>
+        ) : (
+          <ArrowIcon className={`${buttonIconSize[size]}`} />
+        )
+      ) : (
+        ''
+      )}
       {text}
     </button>
   );
@@ -31,6 +43,7 @@ export const Button: FC<ButtonProps> = (props) => {
 Button.defaultProps = {
   text: 'J Button',
   disable: false,
-  type: 'filled',
   className: '',
+  showIcon: false,
+  icon: null,
 };
