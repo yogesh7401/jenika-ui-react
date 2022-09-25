@@ -17,7 +17,7 @@
     "start": "tsdx watch",
     "build": "NODE_ENV=production tsdx build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
+    "lint": "tsdx lint --fix",
     "size": "size-limit",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -29,7 +29,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "tsdx lint --fix"
     }
   },
   "prettier": {
