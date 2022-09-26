@@ -84,3 +84,5 @@ export interface BadgeProps {
   icon?: ReactNode;
   showIcon?: boolean;
 }
+
+export interface TypographyProps {}

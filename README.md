@@ -46,8 +46,41 @@ export default funtion App() {
 
 We'd love for you to contribute to our source code and to make JenikaUI even better than it is today! :heart:
 
+### To add new component
+
+After [Forking](https://github.com/yogesh7401/jenika-ui-react/fork) and cloning this repository run the bellow command to auto generate basic template of component, storybook, test file.
+
+For NPM User:
+
+```bash
+npm run generate <component_name>
+```
+
+For Yarn User:
+
+```bash
+yarn generate <component_name>
+```
+
+> Here <code>component_name</code> refers to the name of the new component that is need to be created
+
+    .
+    ├── ...
+    ├── src
+    |   └── components
+    │       └── <component_name>
+    |           └── <component_name>.tsx
+    |
+    ├── stories  
+    │   └── <component_name>.stories.tsx
+    |
+    ├── test  
+    │   └── <component_name>.test.tsx
+    └── ...
+
+
 ### License: [MIT](./LICENSE)
 
-### Authors:
+### Author:
 
 - [Yogeshwaran](https://yogesh7401.netlify.app/)
