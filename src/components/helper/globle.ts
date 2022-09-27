@@ -28,6 +28,18 @@ export const badgeIconSize = {
   lg: 'jui-w-6 jui-h-6',
 };
 
+export const textColor = {
+  primary: 'jui-text-indigo-500',
+  secondary: 'jui-text-blue-500',
+  success: 'jui-text-green-500',
+  danger: 'jui-text-red-500',
+  warning: 'jui-text-orange-500',
+  info: 'jui-text-blue-400',
+  dark: 'jui-text-gray-800',
+  light: 'jui-text-white',
+  default: 'jui-text-black',
+};
+
 export const variants = {
   primary: 'jui-bg-indigo-500 hover:jui-bg-indigo-600 jui-text-white',
   secondary: 'jui-bg-blue-500 hover:jui-bg-blue-600 jui-text-white',

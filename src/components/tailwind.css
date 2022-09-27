@@ -28,3 +28,7 @@
     transform: scale(1);
   }
 }
+
+#jui-breadcrumb-item:last-child {
+  color: black !important;
+}

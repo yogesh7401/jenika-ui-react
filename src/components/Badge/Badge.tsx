@@ -20,7 +20,6 @@ export const Badge: FC<BadgeProps> = (props) => {
   } ${
     type === 'filled' ? variants[variant] : outlined[variant]
   } text-[${size}]`;
-  console.log(text, size, onClick, type, className, badgeClass, variant);
 
   return (
     <p

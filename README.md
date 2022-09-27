@@ -71,16 +71,15 @@ yarn generate <component_name>
     │       └── <component_name>
     |           └── <component_name>.tsx
     |
-    ├── stories  
+    ├── stories
     │   └── <component_name>.stories.tsx
     |
-    ├── test  
+    ├── test
     │   └── <component_name>.test.tsx
     └── ...
 
+## License: [MIT](./LICENSE)
 
-### License: [MIT](./LICENSE)
-
-### Author:
+## Author:
 
 - [Yogeshwaran](https://yogesh7401.netlify.app/)

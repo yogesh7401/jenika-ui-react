@@ -6,3 +6,4 @@ export * from './Accordion/Accordion';
 export * from './Alert/Alert';
 export * from './AlertDialog/AlertDialog';
 export * from './Typography/Typography';
+export * from './Breadcrumb/Breadcrumb';

@@ -1,6 +1,5 @@
-
 // component.tsx
-exports.component = name => `import React, { FC } from 'react';
+exports.component = (name) => `import React, { FC } from 'react';
 import { ${name}Props } from '../types';
 
 export const ${name}: FC<${name}Props> = (props) => {
@@ -10,7 +9,7 @@ export const ${name}: FC<${name}Props> = (props) => {
 `;
 
 // component.stories.jsx
-exports.story = name => `import React from 'react';
+exports.story = (name) => `import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { ${name} } from '../src/components/${name}/${name}';
 import '../src/components/tailwind.css';
@@ -36,7 +35,7 @@ export const Default = Template.bind({});
 `;
 
 // component.test.tsx
-exports.test = name => `import React from 'react';
+exports.test = (name) => `import React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Default as ${name} } from '../stories/${name}.stories';
 
@@ -49,4 +48,4 @@ describe('${name} Component', () => {
 });
 `;
 // index.tsx
-exports.barrel = name => `\nexport * from './${name}/${name}';`;
+exports.barrel = (name) => `\nexport * from './${name}/${name}';`;
