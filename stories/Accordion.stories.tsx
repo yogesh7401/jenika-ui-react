@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Accordion } from '../src/components/Accordion/Accordion';
 import '../src/components/tailwind.css';
 import { AccordionProps } from '../src/components/types';
@@ -15,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<AccordionProps> = (args) => <Accordion {...args} />;
+const Template: StoryFn<AccordionProps> = (args) => <Accordion {...args} />;
 
 export const Default = Template.bind({});
 export const Collapse = Template.bind({});

@@ -40,7 +40,9 @@ export default funtion App() {
 - [Alert](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-alert--default)
 - [Alert Dialog](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-alert-dialog--default)
 - [Badge](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-badge--default)
+- [Breadcrumb](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-breadcrumb--default)
 - [Button](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-button--default)
+- [Typography](https://yogesh7401.github.io/jenika-ui-react/?path=/story/components-typography--default)
 
 ## Contribute
 

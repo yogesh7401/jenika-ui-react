@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Badge } from '../src/components/Badge/Badge';
 import '../src/components/tailwind.css';
 import { BadgeProps } from '../src/components/types';
@@ -15,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<BadgeProps> = (args) => (
+const Template: StoryFn<BadgeProps> = (args) => (
   <>
     <Badge {...args} />
   </>

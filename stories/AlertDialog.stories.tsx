@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { AlertDialog } from '../src/components/AlertDialog/AlertDialog';
 import '../src/components/tailwind.css';
 import { AlertDialogProps } from '../src/components/types';
@@ -16,7 +16,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<AlertDialogProps> = (args) => (
+const Template: StoryFn<AlertDialogProps> = (args) => (
   <AlertDialog className="min-h-screen" {...args} />
 );
 

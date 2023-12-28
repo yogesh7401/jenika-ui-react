@@ -10,7 +10,7 @@ export const ${name}: FC<${name}Props> = (props) => {
 
 // component.stories.jsx
 exports.story = (name) => `import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { ${name} } from '../src/components/${name}/${name}';
 import '../src/components/tailwind.css';
 import { ${name}Props } from '../src/components/types';
@@ -25,7 +25,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<${name}Props> = (args) => (
+const Template: StoryFn<${name}Props> = (args) => (
   <>
     <${name} {...args} />
   </>

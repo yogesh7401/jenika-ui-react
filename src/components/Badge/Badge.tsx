@@ -36,7 +36,7 @@ export const Badge: FC<BadgeProps> = (props) => {
       ) : (
         ''
       )}
-      <p>{text}</p>
+      <p className="jui-inline-block jui-align-bottom">{text}</p>
     </p>
   );
 };

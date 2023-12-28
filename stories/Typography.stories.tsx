@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Text } from '../src/components/Typography/Typography';
 import '../src/components/tailwind.css';
 import { TypographyProps } from '../src/components/types';
@@ -14,13 +14,13 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<TypographyProps> = (args) => (
+const Template: StoryFn<TypographyProps> = (args) => (
   <>
     <Text {...args} />
   </>
 );
 
-const HeadingTemplate: Story<TypographyProps> = (args) => (
+const HeadingTemplate: StoryFn<TypographyProps> = (args) => (
   <div className="jui-space-y-3">
     <Text variant="h1" type="primary" children="Heading 1" {...args} />
     <Text variant="h2" type="secondary" children="Heading 2" {...args} />
@@ -31,7 +31,7 @@ const HeadingTemplate: Story<TypographyProps> = (args) => (
   </div>
 );
 
-const TextAlignTemplate: Story<TypographyProps> = (args) => (
+const TextAlignTemplate: StoryFn<TypographyProps> = (args) => (
   <div className="jui-space-y-3">
     <Text variant="p" align="left" children="Left Align" {...args} />
     <Text variant="p" align="center" children="Center Align" {...args} />
@@ -40,7 +40,7 @@ const TextAlignTemplate: Story<TypographyProps> = (args) => (
   </div>
 );
 
-const DecorationTemplate: Story<TypographyProps> = (args) => (
+const DecorationTemplate: StoryFn<TypographyProps> = (args) => (
   <div className="jui-space-y-3">
     <Text
       variant="p"

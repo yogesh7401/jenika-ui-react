@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Breadcrumb } from '../src/components/Breadcrumb/Breadcrumb';
 import '../src/components/tailwind.css';
 import { BreadcrumbProps } from '../src/components/types';
@@ -15,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<BreadcrumbProps> = (args) => (
+const Template: StoryFn<BreadcrumbProps> = (args) => (
   <>
     <Breadcrumb {...args} />
   </>

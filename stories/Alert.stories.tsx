@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Alert } from '../src/components/Alert/Alert';
 import '../src/components/tailwind.css';
 import { AlertProps } from '../src/components/types';
@@ -15,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<AlertProps> = (args) => <Alert {...args} />;
+const Template: StoryFn<AlertProps> = (args) => <Alert {...args} />;
 
 export const Default = Template.bind({});
 export const CustomIcon = Template.bind({});

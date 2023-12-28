@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Button } from '../src/components/Button/Button';
 import '../src/components/tailwind.css';
 import { ButtonProps } from '../src/components/types';
@@ -15,7 +15,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = (args) => (
+const Template: StoryFn<ButtonProps> = (args) => (
   <>
     <Button {...args} />
   </>
